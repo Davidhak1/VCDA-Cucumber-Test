@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="79447" started-at="2018-12-28T12:46:07Z" finished-at="2018-12-28T12:47:26Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="cucumber.api.testng.AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group>
+    </groups>
+    <test name="Test Validating APIs for VCDA controllers" duration-ms="79447" started-at="2018-12-28T12:46:07Z" finished-at="2018-12-28T12:47:26Z">
+      <class name="CucumberOptions.TestRunner">
+        <test-method status="PASS" signature="setUpClass()" name="setUpClass" is-config="true" duration-ms="142" started-at="2018-12-28T12:46:07Z" finished-at="2018-12-28T12:46:07Z">
+        </test-method>
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)" name="feature" duration-ms="53700" started-at="2018-12-28T12:46:07Z" description="Runs Cucumber Feature" finished-at="2018-12-28T12:47:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Equipment Controller Test]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)" name="feature" duration-ms="4692" started-at="2018-12-28T12:47:01Z" description="Runs Cucumber Feature" finished-at="2018-12-28T12:47:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[incentives Controller Test]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)" name="feature" duration-ms="3045" started-at="2018-12-28T12:47:05Z" description="Runs Cucumber Feature" finished-at="2018-12-28T12:47:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Price Controller Test]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)" name="feature" duration-ms="6287" started-at="2018-12-28T12:47:09Z" description="Runs Cucumber Feature" finished-at="2018-12-28T12:47:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Vehicle (V2) Controller Test]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)" name="feature" duration-ms="11205" started-at="2018-12-28T12:47:15Z" description="Runs Cucumber Feature" finished-at="2018-12-28T12:47:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Vehicle (V2) Controller Test]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="tearDownClass()" name="tearDownClass" is-config="true" duration-ms="297" started-at="2018-12-28T12:47:26Z" finished-at="2018-12-28T12:47:26Z">
+        </test-method>
+      </class>
+    </test>
+  </suite>
+</testng-results>

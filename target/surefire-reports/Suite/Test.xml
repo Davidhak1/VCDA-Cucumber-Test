@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="LDALmac40V8JG5M" name="RegressionV1API.IncentivesSearchControllerTest" tests="30" failures="0" timestamp="5 Dec 2018 18:28:23 GMT" time="15.057" errors="0">
+  <testcase name="AssertStatusCodeNegativeWrongAuth" time="1.324" classname="RegressionV1API.IncentivesSearchControllerTest"/>
+  <testcase name="AssertStatusCodeNegativeWrongId" time="0.409" classname="RegressionV1API.IncentivesSearchControllerTest"/>
+  <testcase name="AssertStatusCodePostive" time="0.655" classname="RegressionV1API.IncentivesSearchControllerTest"/>
+  <testcase name="AssertStatusCodePostive2" time="0.734" classname="RegressionV1API.IncentivesSearchControllerTest"/>
+  <testcase name="AssertStatusCodeNegativeWrongAuth" time="0.379" classname="RegressionV1API.accountControllerTest"/>
+  <testcase name="AssertStatusCodeNegativeWrongId" time="0.419" classname="RegressionV1API.accountControllerTest"/>
+  <testcase name="AssertStatusCodePostive" time="0.404" classname="RegressionV1API.accountControllerTest"/>
+  <testcase name="AssertStatusCodeNegativeWrongAccountId" time="0.409" classname="RegressionV1API.accountsSearchControllerTest"/>
+  <testcase name="AssertStatusCodeNegativeWrongAuth" time="0.376" classname="RegressionV1API.accountsSearchControllerTest"/>
+  <testcase name="AssertStatusCodeNegativeWrongId" time="0.397" classname="RegressionV1API.accountsSearchControllerTest"/>
+  <testcase name="AssertStatusCodePostive" time="0.411" classname="RegressionV1API.accountsSearchControllerTest"/>
+  <testcase name="AssertStatusCodePostive2" time="0.424" classname="RegressionV1API.accountsSearchControllerTest"/>
+  <testcase name="AssertStatusCodeNegativeWrongAuth" time="0.377" classname="RegressionV1API.incentiveControllerTest"/>
+  <testcase name="AssertStatusCodeNegativeWrongId" time="0.409" classname="RegressionV1API.incentiveControllerTest"/>
+  <testcase name="AssertStatusCodePostiveAndIdTheSame" time="0.409" classname="RegressionV1API.incentiveControllerTest"/>
+  <testcase name="AssertStatusCodeNegativeWrongAuth" time="0.396" classname="RegressionV1API.vechicleControllerTest"/>
+  <testcase name="AssertStatusCodeNegativeWrongId" time="0.397" classname="RegressionV1API.vechicleControllerTest"/>
+  <testcase name="AssertStatusCodePostive" time="0.725" classname="RegressionV1API.vechicleControllerTest"/>
+  <testcase name="AssertStatusCodeNegativeNoId" time="0.396" classname="RegressionV1API.vechicleVCDAControllerTest"/>
+  <testcase name="AssertStatusCodeNegativeWrongAuth" time="0.389" classname="RegressionV1API.vechicleVCDAControllerTest"/>
+  <testcase name="AssertStatusCodeNegativeWrongId" time="0.407" classname="RegressionV1API.vechicleVCDAControllerTest"/>
+  <testcase name="AssertStatusCodePostive" time="0.447" classname="RegressionV1API.vechicleVCDAControllerTest"/>
+  <testcase name="AssertStatusCodeNegativeWrongAuth" time="0.392" classname="RegressionV1API.vechiclesSearchControllerTest"/>
+  <testcase name="AssertStatusCodeNegativeWrongId" time="0.402" classname="RegressionV1API.vechiclesSearchControllerTest"/>
+  <testcase name="AssertStatusCodePostive" time="0.463" classname="RegressionV1API.vechiclesSearchControllerTest"/>
+  <testcase name="AssertStatusCodePostive2" time="0.951" classname="RegressionV1API.vechiclesSearchControllerTest"/>
+  <testcase name="AssertStatusCodeNegativeWrongAuth" time="0.388" classname="RegressionV1API.vechiclesVCDASearchControllerTest"/>
+  <testcase name="AssertStatusCodeNegativeWrongId" time="0.426" classname="RegressionV1API.vechiclesVCDASearchControllerTest"/>
+  <testcase name="AssertStatusCodePostive" time="0.428" classname="RegressionV1API.vechiclesVCDASearchControllerTest"/>
+  <testcase name="AssertStatusCodePostive2" time="0.897" classname="RegressionV1API.vechiclesVCDASearchControllerTest"/>
+</testsuite>
