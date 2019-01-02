@@ -5,6 +5,7 @@ Feature: Vehicle (V2) Controller Test
     And the server endpoint is https://vehicles-qa.inv-np.dealer.com
 
 
+    @vehicle-controller
   @Rest_Assured
   @Controller_1
   Scenario Outline: Endpoints {/vehicles,/vehicles/listingconfig }  - Validating response with request parameters - uuid, vin
@@ -23,8 +24,9 @@ Feature: Vehicle (V2) Controller Test
     Examples:
       | endpoint                |
       | /vehicles               |
-      | /vehicles/listingconfig |
+#      | /vehicles/listingconfig |
 
+  @vehicle-controller
   @Rest_Assured
   @Controller_1.1
   Scenario Outline: Endpoints {/vehicles,/vehicles/listingconfig } - Validating response with request parameters - uuid, vin, accountId
@@ -43,9 +45,10 @@ Feature: Vehicle (V2) Controller Test
     Examples:
       | endpoint                |
       | /vehicles               |
-      | /vehicles/listingconfig |
+#      | /vehicles/listingconfig |
 
 
+  @vehicle-controller
   @Rest_Assured
   @Controller_1.2
   Scenario Outline: Endpoints {/vehicles,/vehicles/listingconfig } - Validating response with request parameters - uuid
@@ -62,9 +65,10 @@ Feature: Vehicle (V2) Controller Test
     Examples:
       | endpoint                |
       | /vehicles               |
-      | /vehicles/listingconfig |
+#      | /vehicles/listingconfig |
 
 
+  @vehicle-controller
   @Rest_Assured
   @Controller_1.3
   Scenario Outline: Endpoints {/vehicles,/vehicles/listingconfig } - Validating response with request parameters - vin, accountId
@@ -82,9 +86,10 @@ Feature: Vehicle (V2) Controller Test
     Examples:
       | endpoint                |
       | /vehicles               |
-      | /vehicles/listingconfig |
+#      | /vehicles/listingconfig |
 
 
+  @vehicle-controller
   @Rest_Assured
   @Controller_1.4
   Scenario Outline: Endpoints {/vehicles,/vehicles/listingconfig } - Validating response with request parameters - vin
@@ -99,9 +104,10 @@ Feature: Vehicle (V2) Controller Test
     Examples:
       | endpoint                |
       | /vehicles               |
-      | /vehicles/listingconfig |
+#      | /vehicles/listingconfig |
 
 
+  @vehicle-controller
   @Rest_Assured
   @Controller_1.5
   Scenario Outline: Endpoints {/vehicles,/vehicles/listingconfig } - Validating response with request parameters - accountId
@@ -116,9 +122,10 @@ Feature: Vehicle (V2) Controller Test
     Examples:
       | endpoint                |
       | /vehicles               |
-      | /vehicles/listingconfig |
+#      | /vehicles/listingconfig |
 
 
+  @vehicle-controller
   @Rest_Assured
   @Controller_1.6
   Scenario: Endpoint /vehicles/id/{uuid} - Validating response with uuid
@@ -133,6 +140,7 @@ Feature: Vehicle (V2) Controller Test
       | accountId | carlgregorycdjcolumbuscllc       |
 
 
+  @vehicle-controller
   @Rest_Assured
   @Controller_1.7
   Scenario: Endpoint /vehicles/id/{uuid} - Validating response with wrong uuid
@@ -143,6 +151,7 @@ Feature: Vehicle (V2) Controller Test
     Then the response code should be 404
 
 
+  @vehicle-controller
   @Rest_Assured
   @Controller_2.1
   Scenario Outline:Endpoints {/vehicles,/vehicles/listingconfig } Negative username
@@ -158,6 +167,7 @@ Feature: Vehicle (V2) Controller Test
       | /vehicles/listingconfig |
 
 
+  @vehicle-controller
   @Rest_Assured
   @Controller_2.2
   Scenario Outline:Endpoints {/vehicles,/vehicles/listingconfig } Negative password
@@ -173,6 +183,7 @@ Feature: Vehicle (V2) Controller Test
       | /vehicles/listingconfig |
 
 
+  @vehicle-controller
   @Rest_Assured
   @Controller_2.3
   Scenario Outline:Endpoints {/vehicles,/vehicles/listingconfig } Negative wrong uuid
@@ -185,4 +196,4 @@ Feature: Vehicle (V2) Controller Test
     Examples:
       | endpoint                |
       | /vehicles               |
-      | /vehicles/listingconfig |
+#      | /vehicles/listingconfig |

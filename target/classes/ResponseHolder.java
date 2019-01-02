@@ -1,6 +1,7 @@
 package resources;
 
 import io.restassured.http.Headers;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
 public class ResponseHolder {
@@ -9,7 +10,10 @@ public class ResponseHolder {
     public static String responseBody;
     public static Headers responseHeaders;
 
-    public static void setResponse (Response response){ ResponseHolder.response = response;}
+    public static void setResponse (Response response) {
+        ResponseHolder.response = response;
+        System.out.println(getResponseBody());
+    }
 
     public static Response getResponse() { return response; }
 
@@ -40,5 +44,9 @@ public class ResponseHolder {
         {
             return response.jsonPath().getList(filter).size();
         }
+    }
+
+    public static JsonPath getResponseJsonPath() {
+        return response.jsonPath();
     }
 }

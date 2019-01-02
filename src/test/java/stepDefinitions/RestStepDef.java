@@ -19,6 +19,7 @@ import io.restassured.specification.RequestSpecification;
 
 import model.IMDBVehicle;
 import org.apache.commons.lang3.StringUtils;
+import org.codehaus.jackson.JsonNode;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.map.ObjectReader;
 import org.json.JSONArray;
@@ -160,24 +161,26 @@ public class RestStepDef extends base {
         responseMap = reader.readValue(responseHolder.getResponseBody());
         System.out.println(responseMap);
 
-        //if filter == $ => we should remain in the root of the Object
+        //if filter is not equal '$' => we will cut the response at the node we need (filter)
         if (!(filter.equals("$"))) {
             try {
                 responseMap = (Map<String, Object>) responseMap.get(filter);
-
                 for (String key : query.keySet()) {
                     Assert.assertTrue(responseMap.containsKey(key));
                     Assert.assertEquals(query.get(key), responseMap.get(key).toString());
                 }
-            } catch (ClassCastException e) {
+
+            }
+
+            catch (ClassCastException e) {
                 responseMapArray = (ArrayList<HashMap<String, String>>) responseMap.get(filter);
 
-                System.out.println("RESPONSE MAP ARRAY--->" + responseMapArray);
+                System.out.println("RESPONSE MAP ARRAY --->" + responseMapArray);
 
                 for (String key : query.keySet()) {
                     for (HashMap<String, String> map : responseMapArray) {
                         Assert.assertTrue(map.containsKey(key),
-                                String.format("The response doesn't containt key -> %s", key));
+                                String.format("The response doesn't contain key -> %s", key));
                         try {
                             Assert.assertEquals(query.get(key), map.get(key));
                         }catch (ClassCastException exception){
@@ -189,13 +192,32 @@ public class RestStepDef extends base {
                             Assert.assertEquals(query.get(key), responseValue);
 
                         }
-                    }
-
-                    System.out.println(key + "=" + query.get(key));
-
+                    }   System.out.println(key + "=" + query.get(key));
                 }
+
             }
         }
+
+    }
+    @Then("^I should see the specifc json value for the following jsonPath$")
+    public void iShouldSeeTheSpecifcJsonValueForTheFollowingJsonPath(DataTable dataTable) {
+        Map<String, String> query = new LinkedHashMap<String, String>();
+
+        for (DataTableRow row : dataTable.getGherkinRows()) {
+            query.put(row.getCells().get(0), row.getCells().get(1));
+        }
+
+        for (Map.Entry<String,String> entry : query.entrySet()) {
+            System.out.printf("Key = %s, Value = %s%n", entry.getKey(), entry.getValue());
+            JsonPath jsonPath = responseHolder.getResponseJsonPath();
+
+//            System.out.println("DATA TABLE->>> "+ jsonPath.get(entry.getKey()));
+
+            Assert.assertEquals(entry.getValue(), jsonPath.get(entry.getKey()));
+
+
+        }
+
 
     }
 
@@ -234,6 +256,9 @@ public class RestStepDef extends base {
             Assert.assertTrue(actualLen > length, String.format("The actual length supposed, but is not greater than expected. actual: %d | expected: %d", length, actualLen));
         }
     }
+
+
+
 }
 
 

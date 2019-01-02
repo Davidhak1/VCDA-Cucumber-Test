@@ -16,7 +16,8 @@ import java.io.File;
 		features = "src/test/java/features",
 		glue="stepDefinitions",
 		tags = {"@Rest_Assured"},
-		plugin={"com.cucumber.listener.ExtentCucumberFormatter:target/html/report.html"},
+//        tags = {"@vehicle-controller"},
+        plugin={"com.cucumber.listener.ExtentCucumberFormatter:target/html/report.html"},
 		monochrome = true
 )
 public class TestRunner extends AbstractTestNGCucumberTests  {
